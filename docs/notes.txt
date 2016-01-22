@@ -1,0 +1,51 @@
+
+base {url, auth, default-language}
+
+Objects:
+    Item {id, rev; labels, descriptions, aliases, site_links, statements}
+    Property {id, rev; datatype, labels, descriptions, aliases, site_links, statements}
+    Statement {property, value, qualifiers, references, rank}
+
+Constants:
+    languages
+    sites (for links)
+    datatypes
+    ranks {preferred, normal, deprecated}
+
+====================================
+
+will wikibase servers have non-wikimediafoundation language codes and/or
+"sites"?
+
+====================================
+
+Entities:
+    wbsearchentities
+    wbgetentities
+    wbeditentity
+    wbmergeitems
+    wbsetaliases
+    wbsetdescription
+    wbsetsitelink: for linking articles/entities
+
+Claim Editing:
+    wbsetclaim
+    wbgetclaims
+    wbcreateclaim
+    wbremoveclaims
+    wbsetclaimvalue
+    wbsetqualifier
+    wbremovequalifiers
+    wbsetreference
+    wbremovereferences
+
+Other:
+    wbcreateredirect
+
+Unimplemented:
+    wbsetlabel: for linking articles/entities
+    wbsgetsuggestions: gets "related" property recommendations
+    wblinktitles: for linking pages across multiple wikis
+    wbavailablebadges: eg, "good article"
+    wbformatvalue: eg, for JS UIs
+    wbparsevalue: eg, for JS UIs
